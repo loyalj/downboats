@@ -1,0 +1,1 @@
+A really basic board for adding and subtracting some numbers.  It usese touch sensing to interact with the user.
