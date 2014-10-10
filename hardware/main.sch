@@ -6877,6 +6877,8 @@ This is the reduced ISP connector for AVR programming. Common on Arduino. This f
 <part name="J1" library="SparkFun-Connectors" deviceset="AVR_SPI_PRG_6" device="NS"/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
 <part name="P+3" library="supply1" deviceset="VCC" device=""/>
+<part name="P+4" library="supply1" deviceset="VCC" device=""/>
+<part name="R5" library="rcl" deviceset="R-US_" device="M0805" value="10K"/>
 </parts>
 <sheets>
 <sheet>
@@ -6905,6 +6907,8 @@ This is the reduced ISP connector for AVR programming. Common on Arduino. This f
 <instance part="J1" gate="G$1" x="99.06" y="137.16"/>
 <instance part="GND3" gate="1" x="121.92" y="132.08"/>
 <instance part="P+3" gate="VCC" x="114.3" y="144.78"/>
+<instance part="P+4" gate="VCC" x="33.02" y="251.46"/>
+<instance part="R5" gate="G$1" x="33.02" y="241.3" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -7164,6 +7168,11 @@ This is the reduced ISP connector for AVR programming. Common on Arduino. This f
 <pinref part="P+3" gate="VCC" pin="VCC"/>
 <wire x1="114.3" y1="139.7" x2="114.3" y2="142.24" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="R5" gate="G$1" pin="1"/>
+<pinref part="P+4" gate="VCC" pin="VCC"/>
+<wire x1="33.02" y1="246.38" x2="33.02" y2="248.92" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="GND" class="0">
 <segment>
@@ -7215,6 +7224,22 @@ This is the reduced ISP connector for AVR programming. Common on Arduino. This f
 <pinref part="IC1" gate="1" pin="ANALOG_1"/>
 <wire x1="101.6" y1="231.14" x2="127" y2="231.14" width="0.1524" layer="91"/>
 <label x="127" y="231.14" size="1.4224" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="RESET" class="0">
+<segment>
+<pinref part="J1" gate="G$1" pin="5"/>
+<wire x1="91.44" y1="134.62" x2="71.12" y2="134.62" width="0.1524" layer="91"/>
+<label x="71.12" y="134.62" size="1.778" layer="95" rot="MR0" xref="yes"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="1" pin="RESET"/>
+<wire x1="40.64" y1="233.68" x2="33.02" y2="233.68" width="0.1524" layer="91"/>
+<label x="27.94" y="233.68" size="1.778" layer="95" rot="MR0" xref="yes"/>
+<pinref part="R5" gate="G$1" pin="2"/>
+<wire x1="33.02" y1="233.68" x2="27.94" y2="233.68" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="236.22" x2="33.02" y2="233.68" width="0.1524" layer="91"/>
+<junction x="33.02" y="233.68"/>
 </segment>
 </net>
 </nets>
