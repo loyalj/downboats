@@ -6543,6 +6543,7 @@ Atmel ATmega8, ATmega168: 8-bit AVR microcontrollers
 <vertex x="5" y="-15"/>
 <vertex x="-5" y="-15" curve="-90"/>
 </polygon>
+<text x="0" y="1" size="1.27" layer="25" align="center">&lt;Name&gt;</text>
 <smd name="SND" x="-15" y="0" dx="1.27" dy="0.635" layer="1" rot="R90"/>
 <smd name="RCV" x="15" y="0" dx="1.27" dy="0.635" layer="1" rot="R90"/>
 </package>
