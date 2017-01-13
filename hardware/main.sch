@@ -6543,6 +6543,7 @@ Atmel ATmega8, ATmega168: 8-bit AVR microcontrollers
 <vertex x="5" y="-15"/>
 <vertex x="-5" y="-15" curve="-90"/>
 </polygon>
+<text x="0" y="1" size="1.27" layer="25" align="center">&lt;Name&gt;</text>
 <smd name="SND" x="-15" y="0" dx="1.27" dy="0.635" layer="1" rot="R90"/>
 <smd name="RCV" x="15" y="0" dx="1.27" dy="0.635" layer="1" rot="R90"/>
 </package>
@@ -6854,30 +6855,26 @@ This is the reduced ISP connector for AVR programming. Common on Arduino. This f
 </class>
 </classes>
 <parts>
-<part name="R1" library="rcl" deviceset="R-US_" device="M0805"/>
-<part name="R2" library="rcl" deviceset="R-US_" device="M0805"/>
-<part name="R3" library="rcl" deviceset="R-US_" device="M0805"/>
-<part name="R4" library="rcl" deviceset="R-US_" device="M0805"/>
-<part name="R6" library="rcl" deviceset="R-US_" device="M0805"/>
-<part name="R7" library="rcl" deviceset="R-US_" device="M0805"/>
-<part name="R8" library="rcl" deviceset="R-US_" device="M0805"/>
-<part name="R9" library="rcl" deviceset="R-US_" device="M0805"/>
+<part name="R1" library="rcl" deviceset="R-US_" device="R0603"/>
+<part name="R2" library="rcl" deviceset="R-US_" device="R0603"/>
+<part name="R3" library="rcl" deviceset="R-US_" device="R0603"/>
+<part name="R4" library="rcl" deviceset="R-US_" device="R0603"/>
 <part name="IC1" library="Arduino-AVR" deviceset="ATMEGA168" device="-AU"/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
 <part name="P+1" library="supply1" deviceset="VCC" device=""/>
-<part name="C1" library="rcl" deviceset="C-US" device="C0805" value=".1uF"/>
+<part name="C1" library="rcl" deviceset="C-US" device="C0603" value=".1uF"/>
 <part name="DISP2" library="led-display-4digit" deviceset="7SEG-4DIG-CA" device=""/>
 <part name="BATT1" library="rbg-4ucon-battery" deviceset="2032SMD" device=""/>
 <part name="P+2" library="supply1" deviceset="VCC" device=""/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
-<part name="C2" library="rcl" deviceset="C-US" device="C0805" value=".1uF"/>
+<part name="C2" library="rcl" deviceset="C-US" device="C0603" value=".1uF"/>
 <part name="DOWN" library="touch-me" deviceset="AVD-TCH-01" device=""/>
 <part name="UP" library="touch-me" deviceset="AVD-TCH-01" device=""/>
 <part name="J1" library="SparkFun-Connectors" deviceset="AVR_SPI_PRG_6" device="NS"/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
 <part name="P+3" library="supply1" deviceset="VCC" device=""/>
 <part name="P+4" library="supply1" deviceset="VCC" device=""/>
-<part name="R5" library="rcl" deviceset="R-US_" device="M0805" value="10K"/>
+<part name="R5" library="rcl" deviceset="R-US_" device="R0603" value="10K"/>
 </parts>
 <sheets>
 <sheet>
@@ -6888,10 +6885,6 @@ This is the reduced ISP connector for AVR programming. Common on Arduino. This f
 <instance part="R2" gate="G$1" x="198.12" y="226.06" rot="R270"/>
 <instance part="R3" gate="G$1" x="193.04" y="220.98" rot="R270"/>
 <instance part="R4" gate="G$1" x="187.96" y="226.06" rot="R270"/>
-<instance part="R6" gate="G$1" x="241.3" y="208.28" rot="R90"/>
-<instance part="R7" gate="G$1" x="292.1" y="208.28" rot="R90"/>
-<instance part="R8" gate="G$1" x="261.62" y="208.28" rot="R90"/>
-<instance part="R9" gate="G$1" x="312.42" y="208.28" rot="R90"/>
 <instance part="IC1" gate="1" x="71.12" y="205.74"/>
 <instance part="GND1" gate="1" x="25.4" y="172.72"/>
 <instance part="P+1" gate="VCC" x="25.4" y="210.82"/>
@@ -6942,97 +6935,54 @@ This is the reduced ISP connector for AVR programming. Common on Arduino. This f
 <pinref part="DISP2" gate="G$1" pin="CA3"/>
 </segment>
 </net>
-<net name="N$1" class="0">
-<segment>
-<pinref part="R6" gate="G$1" pin="1"/>
-<wire x1="241.3" y1="200.66" x2="241.3" y2="203.2" width="0.1524" layer="91"/>
-<pinref part="DOWN" gate="G$1" pin="SND"/>
-</segment>
-</net>
-<net name="N$6" class="0">
-<segment>
-<pinref part="R8" gate="G$1" pin="1"/>
-<wire x1="261.62" y1="200.66" x2="261.62" y2="203.2" width="0.1524" layer="91"/>
-<pinref part="DOWN" gate="G$1" pin="RCV"/>
-</segment>
-</net>
-<net name="N$7" class="0">
-<segment>
-<pinref part="R7" gate="G$1" pin="1"/>
-<wire x1="292.1" y1="200.66" x2="292.1" y2="203.2" width="0.1524" layer="91"/>
-<pinref part="UP" gate="G$1" pin="SND"/>
-</segment>
-</net>
-<net name="N$8" class="0">
-<segment>
-<pinref part="R9" gate="G$1" pin="1"/>
-<wire x1="312.42" y1="200.66" x2="312.42" y2="203.2" width="0.1524" layer="91"/>
-<pinref part="UP" gate="G$1" pin="RCV"/>
-</segment>
-</net>
-<net name="TCH_SND" class="0">
-<segment>
-<pinref part="R6" gate="G$1" pin="2"/>
-<wire x1="241.3" y1="213.36" x2="241.3" y2="218.44" width="0.1524" layer="91"/>
-<label x="241.3" y="218.44" size="1.778" layer="95" rot="R90" xref="yes"/>
-</segment>
-<segment>
-<pinref part="R7" gate="G$1" pin="2"/>
-<wire x1="292.1" y1="213.36" x2="292.1" y2="218.44" width="0.1524" layer="91"/>
-<label x="292.1" y="218.44" size="1.778" layer="95" rot="R90" xref="yes"/>
-</segment>
-<segment>
-<pinref part="IC1" gate="1" pin="DIGITAL_4"/>
-<wire x1="101.6" y1="200.66" x2="106.68" y2="200.66" width="0.1524" layer="91"/>
-<label x="106.68" y="200.66" size="1.4224" layer="95" xref="yes"/>
-</segment>
-</net>
 <net name="TCH_RCV_DN" class="0">
 <segment>
-<pinref part="IC1" gate="1" pin="DIGITAL_5(PWM)"/>
-<wire x1="101.6" y1="198.12" x2="127" y2="203.2" width="0.1524" layer="91"/>
-<label x="127" y="203.2" size="1.4224" layer="95" xref="yes"/>
+<pinref part="IC1" gate="1" pin="ANALOG_4"/>
+<wire x1="101.6" y1="223.52" x2="116.84" y2="223.52" width="0.1524" layer="91"/>
+<label x="116.84" y="223.52" size="1.4224" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="R8" gate="G$1" pin="2"/>
-<wire x1="261.62" y1="213.36" x2="261.62" y2="218.44" width="0.1524" layer="91"/>
 <label x="261.62" y="218.44" size="1.778" layer="95" rot="R90" xref="yes"/>
+<pinref part="DOWN" gate="G$1" pin="SND"/>
+<wire x1="261.62" y1="203.2" x2="261.62" y2="218.44" width="0.1524" layer="91"/>
+<wire x1="261.62" y1="203.2" x2="241.3" y2="203.2" width="0.1524" layer="91"/>
+<wire x1="241.3" y1="203.2" x2="241.3" y2="200.66" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="TCH_RCV_UP" class="0">
 <segment>
-<pinref part="R9" gate="G$1" pin="2"/>
-<wire x1="312.42" y1="213.36" x2="312.42" y2="218.44" width="0.1524" layer="91"/>
 <label x="312.42" y="218.44" size="1.778" layer="95" rot="R90" xref="yes"/>
+<wire x1="312.42" y1="200.66" x2="312.42" y2="218.44" width="0.1524" layer="91"/>
+<pinref part="UP" gate="G$1" pin="RCV"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="1" pin="DIGITAL_3(PWM)"/>
-<wire x1="101.6" y1="203.2" x2="127" y2="198.12" width="0.1524" layer="91"/>
-<label x="127" y="198.12" size="1.4224" layer="95" xref="yes"/>
+<pinref part="IC1" gate="1" pin="ANALOG_5"/>
+<wire x1="101.6" y1="220.98" x2="116.84" y2="220.98" width="0.1524" layer="91"/>
+<label x="116.84" y="220.98" size="1.4224" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="7S_PW_1000" class="0">
-<segment>
-<pinref part="IC1" gate="1" pin="DIGITAL_6(PWM)"/>
-<wire x1="101.6" y1="195.58" x2="106.68" y2="195.58" width="0.1524" layer="91"/>
-<label x="106.68" y="195.58" size="1.4224" layer="95" xref="yes"/>
-</segment>
 <segment>
 <pinref part="R4" gate="G$1" pin="1"/>
 <wire x1="187.96" y1="231.14" x2="187.96" y2="233.68" width="0.1524" layer="91"/>
 <label x="187.96" y="233.68" size="1.4224" layer="95" rot="R90" xref="yes"/>
 </segment>
+<segment>
+<pinref part="IC1" gate="1" pin="CRYSTAL1"/>
+<wire x1="40.64" y1="218.44" x2="27.94" y2="218.44" width="0.1524" layer="91"/>
+<label x="27.94" y="218.44" size="1.4224" layer="95" ratio="12" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="7S_A" class="0">
-<segment>
-<pinref part="IC1" gate="1" pin="DIGITAL_7"/>
-<wire x1="101.6" y1="193.04" x2="127" y2="193.04" width="0.1524" layer="91"/>
-<label x="127" y="193.04" size="1.4224" layer="95" xref="yes"/>
-</segment>
 <segment>
 <wire x1="175.26" y1="193.04" x2="175.26" y2="190.5" width="0.1524" layer="91"/>
 <label x="175.26" y="190.5" size="1.4224" layer="95" rot="R270" xref="yes"/>
 <pinref part="DISP2" gate="G$1" pin="A"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="1" pin="CRYSTAL2"/>
+<wire x1="40.64" y1="213.36" x2="27.94" y2="213.36" width="0.1524" layer="91"/>
+<label x="27.94" y="213.36" size="1.4224" layer="95" ratio="12" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="7S_B" class="0">
@@ -7049,21 +6999,26 @@ This is the reduced ISP connector for AVR programming. Common on Arduino. This f
 </net>
 <net name="7S_C" class="0">
 <segment>
-<pinref part="IC1" gate="1" pin="DIGITAL_9(PWM)"/>
-<wire x1="101.6" y1="185.42" x2="127" y2="185.42" width="0.1524" layer="91"/>
-<label x="127" y="185.42" size="1.4224" layer="95" xref="yes"/>
+<pinref part="IC1" gate="1" pin="DIGITAL_11(PWM)"/>
+<wire x1="101.6" y1="180.34" x2="106.68" y2="180.34" width="0.1524" layer="91"/>
+<label x="106.68" y="180.34" size="1.4224" layer="95" xref="yes"/>
 </segment>
 <segment>
 <wire x1="180.34" y1="193.04" x2="180.34" y2="190.5" width="0.1524" layer="91"/>
 <label x="180.34" y="190.5" size="1.4224" layer="95" rot="R270" xref="yes"/>
 <pinref part="DISP2" gate="G$1" pin="C"/>
 </segment>
+<segment>
+<pinref part="J1" gate="G$1" pin="4"/>
+<wire x1="109.22" y1="137.16" x2="119.38" y2="137.16" width="0.1524" layer="91"/>
+<label x="119.38" y="137.16" size="1.4224" layer="95" ratio="12" xref="yes"/>
+</segment>
 </net>
 <net name="7S_D" class="0">
 <segment>
 <pinref part="IC1" gate="1" pin="DIGITAL_12"/>
-<wire x1="101.6" y1="177.8" x2="106.68" y2="182.88" width="0.1524" layer="91"/>
-<label x="106.68" y="182.88" size="1.4224" layer="95" xref="yes"/>
+<wire x1="101.6" y1="177.8" x2="106.68" y2="177.8" width="0.1524" layer="91"/>
+<label x="106.68" y="177.8" size="1.4224" layer="95" xref="yes"/>
 </segment>
 <segment>
 <wire x1="182.88" y1="193.04" x2="182.88" y2="180.34" width="0.1524" layer="91"/>
@@ -7079,8 +7034,8 @@ This is the reduced ISP connector for AVR programming. Common on Arduino. This f
 <net name="7S_E" class="0">
 <segment>
 <pinref part="IC1" gate="1" pin="DIGITAL_13"/>
-<wire x1="101.6" y1="175.26" x2="127" y2="180.34" width="0.1524" layer="91"/>
-<label x="127" y="180.34" size="1.4224" layer="95" xref="yes"/>
+<wire x1="101.6" y1="175.26" x2="106.68" y2="175.26" width="0.1524" layer="91"/>
+<label x="106.68" y="175.26" size="1.4224" layer="95" xref="yes"/>
 </segment>
 <segment>
 <wire x1="185.42" y1="193.04" x2="185.42" y2="190.5" width="0.1524" layer="91"/>
@@ -7095,26 +7050,21 @@ This is the reduced ISP connector for AVR programming. Common on Arduino. This f
 </net>
 <net name="7S_F" class="0">
 <segment>
-<pinref part="IC1" gate="1" pin="DIGITAL_11(PWM)"/>
-<wire x1="101.6" y1="180.34" x2="106.68" y2="177.8" width="0.1524" layer="91"/>
-<label x="106.68" y="177.8" size="1.4224" layer="95" xref="yes"/>
+<pinref part="IC1" gate="1" pin="DIGITAL_5(PWM)"/>
+<wire x1="101.6" y1="198.12" x2="106.68" y2="198.12" width="0.1524" layer="91"/>
+<label x="106.68" y="198.12" size="1.4224" layer="95" xref="yes"/>
 </segment>
 <segment>
 <wire x1="187.96" y1="193.04" x2="187.96" y2="180.34" width="0.1524" layer="91"/>
 <label x="187.96" y="180.34" size="1.4224" layer="95" rot="R270" xref="yes"/>
 <pinref part="DISP2" gate="G$1" pin="F"/>
 </segment>
-<segment>
-<pinref part="J1" gate="G$1" pin="4"/>
-<wire x1="109.22" y1="137.16" x2="121.92" y2="137.16" width="0.1524" layer="91"/>
-<label x="121.92" y="137.16" size="1.778" layer="95" xref="yes"/>
-</segment>
 </net>
 <net name="7S_G" class="0">
 <segment>
 <pinref part="IC1" gate="1" pin="DIGITAL_10(PWM)"/>
-<wire x1="101.6" y1="182.88" x2="127" y2="175.26" width="0.1524" layer="91"/>
-<label x="127" y="175.26" size="1.4224" layer="95" xref="yes"/>
+<wire x1="101.6" y1="182.88" x2="106.68" y2="182.88" width="0.1524" layer="91"/>
+<label x="106.68" y="182.88" size="1.4224" layer="95" xref="yes"/>
 </segment>
 <segment>
 <wire x1="190.5" y1="193.04" x2="190.5" y2="190.5" width="0.1524" layer="91"/>
@@ -7129,9 +7079,9 @@ This is the reduced ISP connector for AVR programming. Common on Arduino. This f
 <label x="193.04" y="233.68" size="1.4224" layer="95" rot="R90" xref="yes"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="1" pin="ANALOG_0"/>
-<wire x1="101.6" y1="233.68" x2="106.68" y2="233.68" width="0.1524" layer="91"/>
-<label x="106.68" y="233.68" size="1.4224" layer="95" xref="yes"/>
+<pinref part="IC1" gate="1" pin="DIGITAL_7"/>
+<wire x1="101.6" y1="193.04" x2="116.84" y2="193.04" width="0.1524" layer="91"/>
+<label x="116.84" y="193.04" size="1.4224" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -7208,9 +7158,9 @@ This is the reduced ISP connector for AVR programming. Common on Arduino. This f
 <label x="203.2" y="233.68" size="1.4224" layer="95" rot="R90" xref="yes"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="1" pin="ANALOG_2"/>
-<wire x1="101.6" y1="228.6" x2="106.68" y2="228.6" width="0.1524" layer="91"/>
-<label x="106.68" y="228.6" size="1.4224" layer="95" xref="yes"/>
+<pinref part="IC1" gate="1" pin="DIGITAL_9(PWM)"/>
+<wire x1="101.6" y1="185.42" x2="106.68" y2="185.42" width="0.1524" layer="91"/>
+<label x="106.68" y="185.42" size="1.4224" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="7S_PW_10" class="0">
@@ -7220,9 +7170,9 @@ This is the reduced ISP connector for AVR programming. Common on Arduino. This f
 <label x="198.12" y="233.68" size="1.4224" layer="95" rot="R90" xref="yes"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="1" pin="ANALOG_1"/>
-<wire x1="101.6" y1="231.14" x2="127" y2="231.14" width="0.1524" layer="91"/>
-<label x="127" y="231.14" size="1.4224" layer="95" xref="yes"/>
+<pinref part="IC1" gate="1" pin="DIGITAL_6(PWM)"/>
+<wire x1="101.6" y1="195.58" x2="116.84" y2="195.58" width="0.1524" layer="91"/>
+<label x="116.84" y="195.58" size="1.4224" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="RESET" class="0">
